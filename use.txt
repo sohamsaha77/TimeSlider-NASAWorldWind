@@ -1,0 +1,8 @@
+Call app/preview.html from index.html.
+The default works in preview.html.
+Looking at the register structure, the app/bootstrap register contains ui resource files.
+There are d3-EOX slider and d3.timeslider resources written in CoffeeScript in the app/build register.
+d3 resources exist in the app/d3 register.
+Nasaworld resources exist in the app/NEO and app/util registers.
+All Nasaworld resources exist in the src register.
+There are all Nasaworld resources that have been data-based and arranged in the rasdaman environment.

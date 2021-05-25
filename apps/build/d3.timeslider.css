@@ -1,0 +1,176 @@
+/*
+ * Styles for the time slider
+ * All elements of the timeslider are beneath a svg element with a class of 'timeslider'
+ */
+svg.timeslider {
+  width: 100%;
+  height: 100%;
+  background: white;
+  opacity: .8;
+  border: 1px solid white;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+svg.timeslider .mainaxis {
+  fill: none;
+}
+svg.timeslider .mainaxis .tick line {
+  stroke: #646464;
+  shape-rendering: crispEdges;
+}
+svg.timeslider .mainaxis .tick text {
+  fill: #000000;
+  font-weight: bold;
+  font-size: .9em;
+}
+svg.timeslider .mainaxis .tick.minor {
+  stroke: rgba(100, 100, 100, 0.25);
+  shape-rendering: crispEdges;
+}
+svg.timeslider .mainaxis .domain {
+  stroke: #646464;
+  shape-rendering: crispEdges;
+}
+svg.timeslider .axis .tick text {
+  font-size: .8em;
+}
+svg.timeslider .brush .extent,
+svg.timeslider .brush .handle-circle {
+  opacity: .9;
+  stroke: #333;
+}
+svg.timeslider .tick-date {
+  text-anchor: start !important;
+}
+svg.timeslider .highlight-record {
+  pointer-events: none;
+}
+svg.timeslider.loading {
+  opacity: 0.4;
+}
+.timeslider-tooltip {
+  z-index: 1070;
+  position: fixed;
+  text-align: center;
+  width: auto;
+  height: auto;
+  padding: 2px;
+  font: 12px sans-serif;
+  background: white;
+  border: 0px;
+  border-radius: 8px;
+  pointer-events: none;
+  opacity: 1;
+}
+#pan-left {
+  float: left;
+  border-bottom-left-radius: 4px;
+}
+#pan-right {
+  float: right;
+  border-bottom-right-radius: 4px;
+}
+.arrow-right {
+  width: 0;
+  height: 0;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 9px solid #222;
+  margin-left: 6px;
+  margin-top: 4px;
+}
+.arrow-left {
+  width: 0;
+  height: 0;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-right: 9px solid #222;
+  margin-left: 4px;
+  margin-top: 4px;
+}
+#zoom-in {
+  float: left;
+  margin-left: calc(50% + 10px);
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+  line-height: 16px;
+}
+#zoom-out {
+  float: right;
+  margin-right: calc(50% + 10px);
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+  line-height: 15px;
+}
+#reload {
+  float: left;
+  margin-left: calc(50% - 10px);
+  padding-top: 2px;
+  padding-left: 3px;
+}
+.control {
+  border: 1px solid #555;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  color: #222;
+  margin-top: -23px;
+  background-color: #999;
+  text-align: center;
+  height: 18px;
+  width: 20px;
+  user-select: none;
+}
+.control:hover {
+  background-color: #666;
+}
+.reload-arrow {
+  /*margin-left: 3px;
+  margin-top: 2px;*/
+
+  height: 12px;
+  width: 12px;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAQAAAD8fJRsAAAAqUlEQVQYGX3BIS+EARwH4N+9e99zm2Qjm6eIgmI+gCzY7orCF5EkSfIJ5Cuq2QRRVgUjmXAzM/vjvDPJ8+SHxqpNa5r8ZceLUsqrsQUXmiT2lAdjG3bdKR9KFyvKlTZzFr0rpYsjZSk9l0opbXSG+aUzMjLMP5yamjo3SM+Z4yRKKZP0bCv7SZRSDgzyxZY3j9okyol7Zebas/JkOd+sJ1oTN2ZuHeoy9wmF1z2Os8DzcwAAAABJRU5ErkJggg==");
+}
+.arrowloading {
+  -webkit-animation-name: spin;
+  -webkit-animation-duration: 2000ms;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: spin;
+  -moz-animation-duration: 2000ms;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -ms-animation-name: spin;
+  -ms-animation-duration: 2000ms;
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-timing-function: linear;
+}
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

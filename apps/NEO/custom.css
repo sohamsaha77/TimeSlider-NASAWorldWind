@@ -1,0 +1,23 @@
+em {
+    font-weight: bolder;
+}
+
+div#d3_timeslider {
+    margin: auto;
+    left: 0;
+    right: 0px;
+    position: absolute;
+    bottom: 0;
+    height: 10em;
+    width: 90%;
+    padding: 2em 5%;
+    background:none;
+}
+
+.header{
+    margin: auto;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0px;
+}
